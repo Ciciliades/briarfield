@@ -4,7 +4,7 @@
 
 # Briarfield
 
-A cosy isometric farm valley. An old farm, a pocket of seeds, and six days
+A cosy isometric farm valley. An old farm, a pocket of seeds, and eight days
 of summer: chop wood, mine stone, plant and water radishes, and design the
 valley of your dreams — fences, flower beds, cottages, a windmill — before
 the season ends.
