@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briarfield — a cosy farm valley</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<div class="stage" id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div class="topbar">
+    <div class="stats">
+      <span class="chip" id="chip-coins">🪙 <b>0</b></span>
+      <span class="chip" id="chip-wood">🪵 <b>0</b></span>
+      <span class="chip" id="chip-stone">🪨 <b>0</b></span>
+      <span class="chip" id="chip-charm">🌟 <b>0</b></span>
+    </div>
+    <div class="season">
+      <span id="day-label">Day 1 of 6</span>
+      <span class="season-track"><span id="season-fill"></span></span>
+    </div>
+    <div class="top-actions">
+      <button class="pill-btn accent" id="btn-next-day" type="button">Next Day ▸</button>
+      <button class="pill-btn" id="btn-sound" type="button">🔊 Sound</button>
+      <button class="pill-btn" id="btn-pause" type="button">⏸ Pause</button>
+    </div>
+  </div>
+
+  <div id="goals-panel">
+    <h3>Valley Goals</h3>
+    <div id="goals-list"></div>
+  </div>
+
+  <div id="info-line">Welcome to Briarfield!</div>
+
+  <div class="buildbar-wrap">
+    <div id="build-bar"></div>
+    <button class="build-card tool" id="btn-bulldoze" type="button" title="Bulldoze (B)">
+      <span class="tool-emoji">🔨</span>
+      <span class="card-name">Bulldoze</span>
+      <span class="card-cost">50% back</span>
+      <span class="card-key">B</span>
+    </button>
+  </div>
+
+  <div class="screen open" id="screen-title">
+    <div class="panel">
+      <p class="eyebrow">A COSY FARM VALLEY</p>
+      <h1>BRIARFIELD</h1>
+      <p class="tagline">An old farm, a pocket of seeds, and eight days of summer. Chop wood, plant radishes, and design the valley of your dreams.</p>
+      <div class="howto">
+        <div><span>🚶</span><p><b>Walk</b> with WASD / arrows, or click a spot to stroll over.</p></div>
+        <div><span>🪓</span><p><b>Chop &amp; mine</b> trees and rocks with E. They grow back.</p></div>
+        <div><span>🌱</span><p><b>Farm:</b> press E at a veggie bed to plant, water, and harvest radishes.</p></div>
+        <div><span>🏗️</span><p><b>Design:</b> pick a card below, then click a tile to build. B is bulldoze.</p></div>
+      </div>
+      <p class="best-line" id="best-line"></p>
+      <button class="big-btn" id="btn-start" type="button">Start Farming</button>
+      <p class="fine">Finish all three valley goals before the season ends.</p>
+    </div>
+  </div>
+
+  <div class="screen" id="screen-over">
+    <div class="panel">
+      <p class="eyebrow" id="over-eyebrow">THE SEASON ENDS</p>
+      <h2 id="over-title">A Valley, Complete!</h2>
+      <p class="tagline" id="over-tagline"></p>
+      <div class="results">
+        <div><span class="result-value" id="res-score">0</span><span class="result-label">Score</span></div>
+        <div><span class="result-value" id="res-harvest">0</span><span class="result-label">Crops</span></div>
+        <div><span class="result-value" id="res-placed">0</span><span class="result-label">Built</span></div>
+        <div><span class="result-value" id="res-charm">0</span><span class="result-label">Charm</span></div>
+      </div>
+      <p class="newbest" id="over-newbest">★ NEW BEST ★</p>
+      <button class="big-btn" id="btn-again" type="button">Play Again</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
